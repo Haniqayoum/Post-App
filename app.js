@@ -59,6 +59,9 @@ function post() {
   var currentTime = new Date().toLocaleTimeString();
   var description = document.getElementById("description").value;
   var post = document.getElementById("posts");
+  var name = document.getElementById("FirstName").value;
+  console.log(name);
+  
   console.log(title,description);
   
   if (title.trim() && description.trim()) {
@@ -66,7 +69,8 @@ function post() {
      <DIV class="card m-2">
                             <div class="card-header d-flex"> 
                             <img class="profilePhoto" src="${profilePhotoImg.src}"/>
-                            <h6>Post</h6>           
+                            <h6>${name}</h6>    
+
                             <div class ="time">${currentTime}
                             </div>
                             </div>
